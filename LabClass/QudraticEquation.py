@@ -31,20 +31,23 @@ def main():
     variable_a = UserInput()
     variable_b = UserInput()
     variable_c = UserInput()
+    
     try:
         variable_delta =GetDeta(variable_a, variable_b, variable_c)
         print("delta: ", variable_delta)
+        
         if (variable_delta > 0):
             root_X1 = (-variable_b+(variable_delta**0.5))/(2*variable_a)
             root_X2 =(-variable_b-(variable_delta**0.5))/(2*variable_a)
-            # it doesnot divide with 2a
-            #problem was proper bracet 
             print("your two roots are:", root_X1, root_X2)
+            
         elif (variable_delta == 0):
             root_X1 = -variable_b/(2*variable_a)
             print("There is only one root of this equation: ",root_X1 )
+            
         else:
             print("There are no real root for this equation")
+            
     except:
         print("invalid Calculation,try again...")
 
