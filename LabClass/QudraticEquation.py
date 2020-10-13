@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Oct 11 21:52:15 2020
+Write a python script that takes three floats a, b, c, and calculates and prints the two x roots of the equation: ax^2+bx+c=0
 
 @author: jumman
 """
