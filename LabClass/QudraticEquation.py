@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Oct 11 21:52:15 2020
+Write a python script that takes three floats a, b, c, and calculates and prints the two x roots of the equation: ax^2+bx+c=0
 
 @author: jumman
 """
@@ -31,20 +32,23 @@ def main():
     variable_a = UserInput()
     variable_b = UserInput()
     variable_c = UserInput()
+    
     try:
         variable_delta =GetDeta(variable_a, variable_b, variable_c)
         print("delta: ", variable_delta)
+        
         if (variable_delta > 0):
             root_X1 = (-variable_b+(variable_delta**0.5))/(2*variable_a)
             root_X2 =(-variable_b-(variable_delta**0.5))/(2*variable_a)
-            # it doesnot divide with 2a
-            #problem was proper bracet 
             print("your two roots are:", root_X1, root_X2)
+            
         elif (variable_delta == 0):
             root_X1 = -variable_b/(2*variable_a)
             print("There is only one root of this equation: ",root_X1 )
+            
         else:
             print("There are no real root for this equation")
+            
     except:
         print("invalid Calculation,try again...")
 
